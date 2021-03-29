@@ -2,6 +2,9 @@
 运行环境：windows
 开发语言：C++
 
+## 视频讲解
+<https://www.bilibili.com/video/BV1AZ4y1A7TS>
+
 ## 文件结构
 1.cpp 源程序
 1.exe 编译后程序（不放心可自行编译程序）

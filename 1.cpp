@@ -15,11 +15,12 @@ int main()
     // 修改编码
     system("chcp 65001");
 
-    cout << "请输入按键的间隔时间：";
+    cout << "请输入按键的间隔时间（毫秒）：";
     cin >> interval_time;
 
     FILE *fp = fopen("song.txt", "r");
     ret = fread(buf, 1024, 1, fp);
+    fclose(fp);
     size = strlen(buf);
     cout << "谱子长(字节):" << size << endl;
     cout << "谱子内容为：" << buf << endl;
@@ -29,7 +30,7 @@ int main()
 	// 睡眠5s，准备时间
 	Sleep(5000);
 
-	// 死循环
+	// 循环
 	for(i = 0; i < size; i++)
 	{
         for(j = i; j < size; j++)

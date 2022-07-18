@@ -10,7 +10,7 @@ int main()
     int i = 0, j = 0;
     int ret = 0, size = 0;
     int interval_time = 500;
-    char buf[1024] = {0};
+    char buf[10240] = {0};
 
     // 修改编码
     system("chcp 65001");
@@ -19,7 +19,7 @@ int main()
     cin >> interval_time;
 
     FILE *fp = fopen("song.txt", "r");
-    ret = fread(buf, 1024, 1, fp);
+    ret = fread(buf, 10240, 1, fp);
     fclose(fp);
     size = strlen(buf);
     cout << "谱子长(字节):" << size << endl;
